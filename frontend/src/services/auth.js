@@ -1,4 +1,4 @@
-const BASE_URL = "https://instagram-clone-nypr.onrender.com/";
+const BASE_URL = "/";
 export async function signup(formData) {
   try {
     const res = await fetch(`${BASE_URL}api/auth/signup`, {
