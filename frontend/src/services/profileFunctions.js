@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = "/";
+const BASE_URL = "https://instagram-clone-nypr.onrender.com/";
 
 export async function getProfile(profileId) {
   const token = localStorage.getItem("jwt");
