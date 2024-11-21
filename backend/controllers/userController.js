@@ -3,7 +3,7 @@ const catchAsync = require(path.join(
   __dirname,
   "..",
   "utilities",
-  "CatchAsync"
+  "catchAsync"
 ));
 
 const AppError = require(path.join(__dirname, "..", "utilities", "AppError"));
