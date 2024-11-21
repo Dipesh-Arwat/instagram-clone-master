@@ -1,7 +1,9 @@
 const path = require("path");
+const dotenv = require("dotenv");
 const app = require(path.join(__dirname, "app.js"));
 const mongoose = require("mongoose");
 
+const PORT = process.env.PORT || 5000;
 process.on("uncaughtException", (error) => {
   console.error("Uncaught Exception:", error);
   process.exit(1);
@@ -12,9 +14,9 @@ process.on("unhandledRejection", (reason, promise) => {
   console.error("Unhandled Promise Rejection:", reason);
 });
 
-const DB = process.env.MONGODB_LINK;
+
 mongoose
-  .connect(DB)
+  .connect("mongodb+srv://dipesharwat80:dipesharwat80@cluster0insta.fwn4a.mongodb.net/insta")
   .then(() => {
     console.log(`Successfully connected to database`);
   })
@@ -23,6 +25,6 @@ mongoose
     process.exit(1);
   });
 
-app.listen(process.env.PORT, () =>
-  console.log(`Listening on port ${process.env.PORT}`)
+app.listen(PORT, () =>
+  console.log(`Listening on port ${PORT}`)
 );
