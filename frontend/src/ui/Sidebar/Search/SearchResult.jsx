@@ -7,7 +7,7 @@ export default function SearchResult(data) {
       to={`/app/profile/${searchResult._id}`}
       className={styles.searchResult}
     >
-      <img src={`/${searchResult.profilePicture}`} />
+      <img src={`/${searchResult.profilePicture}`}   alt={`${searchResult.username}'s`}/>
       <span className={styles.username}>{searchResult.username}</span>
       <span className={styles.fullName}>
         {searchResult.firstName} {searchResult.lastName}
