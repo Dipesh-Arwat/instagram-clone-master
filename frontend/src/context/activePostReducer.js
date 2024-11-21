@@ -1,3 +1,4 @@
+// activePostReducer.js
 export const initialState = {
     isOpenModal: false,
     activePost: null,
