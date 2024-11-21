@@ -20,11 +20,7 @@ app.use(express.static(path.join(__dirname, "public", "dist")));
 app.use(express.json());
 
 //enable cors
-app.use(cors({
-  origin: "https://instagram-clone-master-l9m1.onrender.com", // Your frontend URL
-  methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed HTTP methods
-  credentials: true,
-}));
+app.use(cors());
 
 //Routing for signup/login
 app.use("/api/auth", authRouter);
